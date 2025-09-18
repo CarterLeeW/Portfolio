@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Project Details - Chicago "L" Ridership Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 80px 0;
+            margin-top: 56px; /* Adjust for fixed navbar */
+        }
+        .icon-list i {
+            color: var(--primary-color);
+        }
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 600px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Carter Wooton</a>
+        <a href="index.html" class="btn btn-outline-primary ml-auto"><i class="fas fa-arrow-left mr-2"></i>Back to Portfolio</a>
+      </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header text-center">
+        <div class="container">
+            <i class="fas fa-train-subway fa-3x mb-3"></i>
+            <h1 class="display-4 font-weight-bold">Chicago "L" Ridership Analysis</h1>
+            <p class="lead">Uncovering investment opportunities from 25 years of public transit data.</p>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3 class="mb-4">Project Overview</h3>
+                    <p class="text-muted">This project involved a comprehensive analysis of over two decades of ridership data from the Chicago Transit Authority's "L" train system. The primary goal was to identify long-term growth trends and recent, post-pandemic shifts in ridership patterns across 146 stations. By pinpointing areas with sustained growth and rapid recovery, the analysis provides actionable intelligence for business investment, urban planning, and marketing strategies.</p>
+                    
+                    <h3 class="mt-5 mb-4">Key Objectives & Outcomes</h3>
+                    <ul class="list-unstyled icon-list">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-check-circle fa-fw fa-lg mr-2 mt-1"></i>
+                            <div>
+                                <strong>Identified High-Potential Investment Areas:</strong> Pinpointed specific stations with the highest growth rates over 25 years, signaling robust and expanding local economies suitable for new business ventures.
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-check-circle fa-fw fa-lg mr-2 mt-1"></i>
+                            <div>
+                                <strong>Generated Actionable Strategic Insights:</strong> Revealed new, post-pandemic ridership patterns, offering a fresh perspective on commuter behavior for targeted marketing and logistical planning.
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-check-circle fa-fw fa-lg mr-2 mt-1"></i>
+                            <div>
+                                <strong>Enabled Data-Driven Decision-Making:</strong> Developed an interactive visualization tool that simplifies complex growth and recovery trends, empowering stakeholders to explore the data and make informed decisions easily.
+                           </div>
+                        </li>
+                    </ul>
+
+                     <h3 class="mt-5 mb-4">Interactive Ridership Maps</h3>
+                     <p class="text-muted">To provide a comprehensive view of the ridership data, two interactive maps were created. The first shows the long-term growth trends from 2001 to 2019, highlighting areas of sustained development before the pandemic. The second map focuses on the post-pandemic recovery and growth from 2021 to 2024, revealing new patterns in commuter behavior.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card skill-card" style="position: sticky; top: 100px;">
+                        <div class="card-body">
+                            <h4 class="h5 mb-3 text-center">Project Tech Stack</h4>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-cogs mr-2 text-primary"></i><strong>Primary Tool:</strong> R</li>
+                                <li class="mb-2"><i class="fas fa-chart-bar mr-2 text-primary"></i><strong>Visualization:</strong> Plotly, Matplotlib</li>
+                                <li class="mb-2"><i class="fas fa-database mr-2 text-primary"></i><strong>Data Handling:</strong> SQL</li>
+                                <li class="mb-2"><i class="fas fa-file-excel mr-2 text-primary"></i><strong>Reporting:</strong> PowerBI, MS Office</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                               <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-block">
+                                   <i class="fab fa-github mr-1"></i> View on GitHub
+                               </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Maps -->
+            <div class="row mt-4">
+                <div class="col-md-12 mb-5">
+                    <h4 class="text-center mb-3">Pre-Pandemic Growth (2001-2019)</h4>
+                    <div class="map-container">
+                        <iframe src="all_stations_growth_2001_2019_map.html" width="100%" height="600" style="border:none;"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h4 class="text-center mb-3">Post-Pandemic Growth (2021-2024)</h4>
+                    <div class="map-container">
+                        <iframe src="all_stations_growth_2021_2024_map.html" width="100%" height="600" style="border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 Carter Wooton. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  </body>
+</html>
+

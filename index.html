@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" xintegrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -15,212 +14,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Carter Wooton - Data Scientist & Software Engineer</title>
+    <title>Carter Wooton - Software & Data Engineer</title>
     
-    <style>
-      :root {
-        --primary-color: #2563eb;
-        --secondary-color: #1e40af;
-        --accent-color: #06b6d4;
-        --text-dark: #1f2937;
-        --text-light: #6b7280;
-        --bg-light: #f8fafc;
-        --bg-white: #ffffff;
-      }
-
-      body {
-        font-family: 'Inter', sans-serif;
-        line-height: 1.6;
-        color: var(--text-dark);
-      }
-
-      .hero-section {
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        color: white;
-        padding: 100px 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        opacity: 0.1;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-      }
-
-      .profile-img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid rgba(255, 255, 255, 0.2);
-        margin-bottom: 30px;
-      }
-
-      .typing-animation {
-        border-right: 2px solid var(--accent-color);
-        animation: blink 1s infinite;
-      }
-
-      @keyframes blink {
-        0%, 50% { border-color: var(--accent-color); }
-        51%, 100% { border-color: transparent; }
-      }
-
-      .section-title {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 50px;
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background: var(--accent-color);
-      }
-
-      .skill-card {
-        background: var(--bg-white);
-        border-radius: 15px;
-        padding: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-        height: 100%;
-      }
-
-      .skill-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      }
-
-      .skill-icon {
-        font-size: 3rem;
-        color: var(--primary-color);
-        margin-bottom: 20px;
-      }
-
-      .project-card {
-        background: var(--bg-white);
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-        margin-bottom: 30px;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      }
-
-      .project-img {
-        height: 200px;
-        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 3rem;
-      }
-
-      .tech-tag {
-        display: inline-block;
-        background: var(--bg-light);
-        color: var(--primary-color);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        margin: 2px;
-        font-weight: 500;
-      }
-
-      .navbar {
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand {
-        font-weight: 700;
-        color: var(--primary-color) !important;
-      }
-
-      .nav-link {
-        font-weight: 500;
-        color: var(--text-dark) !important;
-        transition: color 0.3s ease;
-      }
-
-      .nav-link:hover {
-        color: var(--primary-color) !important;
-      }
-
-      .btn-primary {
-        background: var(--primary-color);
-        border: none;
-        border-radius: 25px;
-        padding: 12px 30px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-
-      .btn-primary:hover {
-        background: var(--secondary-color);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
-      }
-
-      .contact-section {
-        background: var(--bg-light);
-      }
-
-      .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: var(--primary-color);
-        color: white;
-        border-radius: 50%;
-        text-decoration: none;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-      }
-
-      .social-link:hover {
-        background: var(--secondary-color);
-        transform: translateY(-3px);
-        color: white;
-        text-decoration: none;
-      }
-
-      .stats-counter {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--primary-color);
-      }
-
-      .section-padding {
-        padding: 80px 0;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   
   <body data-spy="scroll" data-target="#navbar" data-offset="70">
@@ -258,41 +54,28 @@
     <section id="home" class="hero-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 hero-content">
+          <div class="col-lg-8 hero-content">
             <h1 class="display-4 font-weight-bold mb-4">
               Hi, I'm <span class="text-warning">Carter Wooton</span>
             </h1>
             <h2 class="h3 mb-4">
-              <span class="typing-animation">Data Scientist & Software Engineer</span>
+              <span class="typing-animation">Software & Data Engineer</span>
             </h2>
             <p class="lead mb-5">
-              Passionate about transforming data into insights and building innovative software solutions. 
-              I combine statistical analysis, machine learning, and full-stack development to solve complex problems.
+              Collaborative and adaptable engineer with a proven ability to tackle complex challenges at the intersection of data analysis, software development, and business strategy. I drive efficiency and uncover critical insights by applying a multi-language programming toolkit and pioneering serverless AI solutions.
             </p>
             <div class="mb-4">
               <a href="#projects" class="btn btn-light btn-lg mr-3">
                 <i class="fas fa-folder-open mr-2"></i>View My Work
               </a>
-              <a href="#contact" class="btn btn-outline-light btn-lg">
-                <i class="fas fa-envelope mr-2"></i>Get In Touch
+              <a href="Business_Resume.pdf" target="_blank" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-file-arrow-down mr-2"></i>Download Resume
               </a>
             </div>
           </div>
-          <div class="col-lg-6 text-center">
-            <div class="row text-center mt-5">
-              <div class="col-4">
-                <div class="stats-counter text-white">15+</div>
-                <p class="text-light">Projects</p>
-              </div>
-              <div class="col-4">
-                <div class="stats-counter text-white">3+</div>
-                <p class="text-light">Years Experience</p>
-              </div>
-              <div class="col-4">
-                <div class="stats-counter text-white">50+</div>
-                <p class="text-light">Models Built</p>
-              </div>
-            </div>
+          <div class="col-lg-4 text-center">
+             <!-- Profile image can be added here if available -->
+             <!-- <img src="path/to/your/image.jpg" alt="Carter Wooton" class="profile-img"> -->
           </div>
         </div>
       </div>
@@ -308,67 +91,29 @@
         </div>
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h3 class="h2 mb-4">Bridging Data Science and Software Engineering</h3>
+            <h3 class="h2 mb-4">Bridging Analytics and Development</h3>
             <p class="text-muted mb-4">
-              I'm a passionate technologist with a strong foundation in both data science and software engineering. 
-              My journey began with a fascination for uncovering patterns in data, which naturally evolved into 
-              building end-to-end solutions that bring insights to life.
+              I am a dedicated technologist passionate about building intelligent systems that answer critical business questions. My experience in backend development allows me to automate processes and enhance data accuracy, while my ongoing Master's in Business Analytics is sharpening my skills in AI and Natural Language Processing.
             </p>
             <p class="text-muted mb-4">
-              With experience in machine learning, statistical analysis, and full-stack development, I enjoy 
-              tackling complex problems that require both analytical thinking and technical implementation. 
-              I believe in the power of data-driven decision making and clean, efficient code.
+              I thrive in dynamic environments where I can manage competing priorities, ensure quality, and advise on technical strategy to reduce operational costs and drive project success.
             </p>
-            <div class="row">
-              <div class="col-6">
-                <h4 class="h5 text-primary">Education</h4>
-                <p class="text-muted">Computer Science<br>Data Science Specialization</p>
-              </div>
-              <div class="col-6">
-                <h4 class="h5 text-primary">Location</h4>
-                <p class="text-muted">Available Worldwide<br>Remote-Friendly</p>
-              </div>
-            </div>
           </div>
           <div class="col-lg-6">
-            <div class="skill-progress">
-              <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Python & Data Science</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-primary" style="width: 95%"></div>
-                </div>
-              </div>
-              <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Machine Learning</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-info" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Web Development</span>
-                  <span>85%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-success" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                  <span>Cloud Platforms</span>
-                  <span>80%</span>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-warning" style="width: 80%"></div>
-                </div>
-              </div>
-            </div>
+              <h4 class="h5 text-primary">Education</h4>
+              <p class="text-muted mb-3">
+                <strong>MS, Business Analytics (AI Concentration)</strong><br>
+                University of Louisville | Expected Dec 2025
+              </p>
+              <p class="text-muted">
+                <strong>BS, Computer Science (Software Engineering)</strong><br>
+                Southern New Hampshire University | Summa Cum Laude
+              </p>
+               <h4 class="h5 text-primary mt-4">Work Experience</h4>
+               <p class="text-muted mb-1">
+                <strong>Software Engineer</strong><br>
+                Essential Innovations - Louisville, KY
+              </p>
           </div>
         </div>
       </div>
@@ -380,98 +125,49 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-title h1 font-weight-bold">Technical Skills</h2>
-            <p class="lead text-muted mb-5">Technologies and tools I work with</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fab fa-python"></i>
-              </div>
-              <h4 class="h5 mb-3">Data Science & ML</h4>
-              <p class="text-muted mb-3">Python, R, Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch, Jupyter</p>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">Scikit-learn</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
+              <h4 class="h5 mb-3">Serverless & Web Dev</h4>
+              <p class="text-muted">Angular, Node.js, .NET, AWS (API Gateway, Lambda, EC2, S3, IAM)</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h4 class="h5 mb-3">Software Development</h4>
-              <p class="text-muted mb-3">JavaScript, TypeScript, React, Node.js, Express, MongoDB, PostgreSQL</p>
-              <div class="tech-tags">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+              <h4 class="h5 mb-3">Data Analysis & Viz</h4>
+              <p class="text-muted">R, Matplotlib, Plotly, SQL, PowerBI, Microsoft Office Suite</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <h4 class="h5 mb-3">Cloud & DevOps</h4>
-              <p class="text-muted mb-3">AWS, Azure, Docker, Kubernetes, Git, CI/CD, Linux, Apache Spark</p>
-              <div class="tech-tags">
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">Git</span>
-                <span class="tech-tag">Linux</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <h4 class="h5 mb-3">Databases & DBMS</h4>
+              <p class="text-muted">AWS RDS, MongoDB, Azure Cosmos DB</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <h4 class="h5 mb-3">Data Visualization</h4>
-              <p class="text-muted mb-3">Matplotlib, Seaborn, Plotly, D3.js, Tableau, Power BI</p>
-              <div class="tech-tags">
-                <span class="tech-tag">Plotly</span>
-                <span class="tech-tag">D3.js</span>
-                <span class="tech-tag">Tableau</span>
-                <span class="tech-tag">Seaborn</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-robot"></i></div>
+              <h4 class="h5 mb-3">AI & Machine Learning</h4>
+              <p class="text-muted">Serverless AI Implementation (AWS Bedrock, Azure AI Foundry)</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              <h4 class="h5 mb-3">Data Engineering</h4>
-              <p class="text-muted mb-3">SQL, NoSQL, ETL, Apache Airflow, Spark, Kafka, Data Warehousing</p>
-              <div class="tech-tags">
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">Airflow</span>
-                <span class="tech-tag">Spark</span>
-                <span class="tech-tag">ETL</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+              <h4 class="h5 mb-3">Languages & Practices</h4>
+              <p class="text-muted">Python, JavaScript, C/C++, C#, Agile, Scrum, Git, Unit Testing</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="skill-card text-center">
-              <div class="skill-icon">
-                <i class="fas fa-brain"></i>
-              </div>
-              <h4 class="h5 mb-3">AI & Deep Learning</h4>
-              <p class="text-muted mb-3">Neural Networks, NLP, Computer Vision, LLMs, MLOps, Model Deployment</p>
-              <div class="tech-tags">
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">NLP</span>
-                <span class="tech-tag">CV</span>
-                <span class="tech-tag">MLOps</span>
-              </div>
+              <div class="skill-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+              <h4 class="h5 mb-3">AI Development Tools</h4>
+              <p class="text-muted">Claude Code, Github Copilot</p>
             </div>
           </div>
         </div>
@@ -483,129 +179,36 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-title h1 font-weight-bold">Featured Projects</h2>
-            <p class="lead text-muted mb-5">Some of my recent work in data science and software engineering</p>
+            <h2 class="section-title h1 font-weight-bold">Featured Project</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
             <div class="project-card">
               <div class="project-img">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-train-subway"></i>
               </div>
-              <div class="card-body p-4">
-                <h4 class="card-title h5 mb-3">Predictive Sales Analytics</h4>
+              <div class="card-body p-4 text-center">
+                <h4 class="card-title h5 mb-3">Chicago "L" Ridership Analysis</h4>
                 <p class="card-text text-muted">
-                  Machine learning model to predict sales trends using time series analysis and feature engineering. 
-                  Achieved 92% accuracy in forecasting quarterly sales.
+                  Analyzed 25 years of ridership data to pinpoint stations with the highest growth rates, highlighting post-pandemic patterns to identify high-potential areas for business investment.
                 </p>
                 <div class="mb-3">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">Scikit-learn</span>
-                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">R</span>
                   <span class="tech-tag">Plotly</span>
+                  <span class="tech-tag">Data Visualization</span>
+                  <span class="tech-tag">Strategic Analysis</span>
                 </div>
                 <div>
                   <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm mr-2">
-                    <i class="fab fa-github mr-1"></i>Code
+                    <i class="fab fa-github mr-1"></i>View on GitHub
                   </a>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i>Demo
+                  <a href="project-chicago-l.html" class="btn btn-primary btn-sm">
+                    <i class="fas fa-circle-info mr-1"></i>View Project Details
                   </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="project-card">
-              <div class="project-img">
-                <i class="fas fa-globe"></i>
-              </div>
-              <div class="card-body p-4">
-                <h4 class="card-title h5 mb-3">Real-time Data Dashboard</h4>
-                <p class="card-text text-muted">
-                  Full-stack web application with real-time data visualization dashboard. Features include 
-                  user authentication, data streaming, and interactive charts.
-                </p>
-                <div class="mb-3">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">MongoDB</span>
-                  <span class="tech-tag">Socket.io</span>
-                </div>
-                <div>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm mr-2">
-                    <i class="fab fa-github mr-1"></i>Code
-                  </a>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i>Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="project-card">
-              <div class="project-img">
-                <i class="fas fa-robot"></i>
-              </div>
-              <div class="card-body p-4">
-                <h4 class="card-title h5 mb-3">NLP Sentiment Analysis</h4>
-                <p class="card-text text-muted">
-                  Deep learning model for sentiment analysis of social media data. Implemented using transformer 
-                  architecture with 95% accuracy on test data.
-                </p>
-                <div class="mb-3">
-                  <span class="tech-tag">PyTorch</span>
-                  <span class="tech-tag">Transformers</span>
-                  <span class="tech-tag">NLTK</span>
-                  <span class="tech-tag">FastAPI</span>
-                </div>
-                <div>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm mr-2">
-                    <i class="fab fa-github mr-1"></i>Code
-                  </a>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i>Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="project-card">
-              <div class="project-img">
-                <i class="fas fa-cloud-upload-alt"></i>
-              </div>
-              <div class="card-body p-4">
-                <h4 class="card-title h5 mb-3">MLOps Pipeline</h4>
-                <p class="card-text text-muted">
-                  End-to-end machine learning pipeline with automated training, testing, and deployment 
-                  using Docker, Kubernetes, and CI/CD practices.
-                </p>
-                <div class="mb-3">
-                  <span class="tech-tag">Docker</span>
-                  <span class="tech-tag">Kubernetes</span>
-                  <span class="tech-tag">MLflow</span>
-                  <span class="tech-tag">AWS</span>
-                </div>
-                <div>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm mr-2">
-                    <i class="fab fa-github mr-1"></i>Code
-                  </a>
-                  <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-external-link-alt mr-1"></i>Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-lg-12 text-center">
-            <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-primary btn-lg">
-              <i class="fab fa-github mr-2"></i>View All Projects on GitHub
-            </a>
           </div>
         </div>
       </div>
@@ -617,31 +220,19 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-title h1 font-weight-bold">Get In Touch</h2>
-            <p class="lead text-muted mb-5">Let's discuss how we can work together</p>
+            <p class="lead text-muted mb-5">Let's discuss how we can work together.</p>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="row">
-              <div class="col-md-6 text-center mb-4">
-                <div class="contact-item">
+          <div class="col-lg-8 text-center">
+              <div class="contact-item">
                   <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
                   <h4 class="h5">Email</h4>
                   <p class="text-muted">carter.wooton@gmail.com</p>
                   <a href="mailto:carter.wooton@gmail.com" class="btn btn-outline-primary">Send Email</a>
-                </div>
               </div>
-              <div class="col-md-6 text-center mb-4">
-                <div class="contact-item">
-                  <i class="fab fa-linkedin fa-3x text-primary mb-3"></i>
-                  <h4 class="h5">LinkedIn</h4>
-                  <p class="text-muted">Connect with me professionally</p>
-                  <a href="https://www.linkedin.com/in/carter-wooton-b3514a248/" target="_blank" class="btn btn-outline-primary">View Profile</a>
-                </div>
-              </div>
-            </div>
             <div class="text-center mt-5">
-              <h4 class="h5 mb-4">Follow Me</h4>
+              <h4 class="h5 mb-4">Connect with Me</h4>
               <div class="social-links">
                 <a href="https://github.com/CarterLeeW" target="_blank" class="social-link">
                   <i class="fab fa-github"></i>
@@ -659,7 +250,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
       <div class="container">
-        <p class="mb-0">&copy; 2025 Carter Wooton. Built with passion for data and code.</p>
+        <p class="mb-0">&copy; 2025 Carter Wooton. All rights reserved.</p>
       </div>
     </footer>
 
@@ -669,61 +260,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
     <!-- Custom JS -->
-    <script>
-      // Smooth scrolling for navigation links
-      $(document).ready(function() {
-        $('a[href^="#"]').on('click', function(event) {
-          var target = $(this.getAttribute('href'));
-          if (target.length) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-              scrollTop: target.offset().top - 70
-            }, 1000);
-          }
-        });
-
-        // Navbar background on scroll
-        $(window).scroll(function() {
-          if ($(window).scrollTop() > 100) {
-            $('.navbar').addClass('scrolled');
-          } else {
-            $('.navbar').removeClass('scrolled');
-          }
-        });
-
-        // Typing animation
-        const text = "Data Scientist & Software Engineer";
-        const typingElement = document.querySelector('.typing-animation');
-        let index = 0;
-        
-        function typeText() {
-          if (index < text.length) {
-            typingElement.textContent = text.slice(0, index + 1);
-            index++;
-            setTimeout(typeText, 100);
-          }
-        }
-        
-        setTimeout(typeText, 1000);
-
-        // Animate progress bars when in view
-        $('.progress-bar').each(function() {
-          const progressBar = $(this);
-          const targetWidth = progressBar.css('width');
-          progressBar.css('width', '0%');
-          
-          $(window).scroll(function() {
-            const elementTop = progressBar.offset().top;
-            const elementBottom = elementTop + progressBar.outerHeight();
-            const viewportTop = $(window).scrollTop();
-            const viewportBottom = viewportTop + $(window).height();
-            
-            if (elementBottom > viewportTop && elementTop < viewportBottom) {
-              progressBar.animate({ width: targetWidth }, 2000);
-            }
-          });
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
