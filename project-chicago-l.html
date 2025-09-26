@@ -9,6 +9,10 @@
     <title>Project Details - Chicago "L" Ridership Analysis</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px;
+        }
         .project-header {
             background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
             color: white;
@@ -109,58 +113,118 @@
                 </div>
             </div>
             
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h3 class="mb-4">Table of Contents</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#problem-overview">Problem Overview</a></li>
+                        <li><a href="#data-modeling">Data and Modeling Approach</a></li>
+                        <li><a href="#findings">Data Analysis Findings</a></li>
+                        <li><a href="#conclusions">Conclusions and Recommendations</a></li>
+                        <li><a href="#charts">Data Visualizations</a></li>
+                        <li><a href="#interactive-maps">Interactive Ridership Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+            
             <!-- Analysis -->
             <div class="row mt-5">
                 <div class="col-12">
                     <h3 class="mb-4">Data Analysis Write-Up</h3>
                     
-                    <h4>Problem Overview</h4>
+                    <h4 id="problem-overview">Problem Overview</h4>
                     <p class="text-muted">The Chicago Transit Authority (CTA) "L" train system serves millions of riders annually, but
                         ridership patterns have fluctuated significantly over the past 25 years due to economic shifts, urban development,
                         and the COVID-19 pandemic. The challenge was to analyze historical ridership data to identify stations with
                         consistent growth and those showing rapid recovery post-pandemic, enabling stakeholders to make informed decisions
                         on investments, infrastructure, and marketing.</p>
                     
-                    <h4>Data and Modeling Approach</h4>
-                    <p class="text-muted">Ridership data from 2001 to 2024 was sourced from the CTA, covering 146 stations with monthly
-                        entries. Data preprocessing involved cleaning for missing values and normalizing for seasonal trends. Growth rates
-                        were calculated using compound annual growth rates (CAGR) for long-term trends (2001-2019) and year-over-year
-                        changes for recovery (2021-2024). Interactive maps were built using Plotly in R, with choropleth visualizations to
-                        highlight growth percentiles.</p>
+                    <h4 id="data-modeling">Data and Modeling Approach</h4>
+                    <p class="text-muted">Ridership data from 2001 to 2024 was sourced from the CTA, covering all stations with daily entries. 
+                        The dataset for stations and their coordinates can be found here:
+                        <a href="https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/about_data" target="_blank">stations</a>,
+                        and the dataset for daily ridership numbers by station since 2001 can be found here:
+                        <a href="https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f/about_data" target="_blank">ridership</a>.
+                        Data preprocessing involved cleaning for missing values and normalizing for seasonal trends. Growth rates
+                        were calculated using compound annual growth rates (CAGR) for both long-term trends (2001-2019) and recovery (2021-2024).
+                        The full notebook with code can be found here:
+                        <a href="notebook.html" target="_blank">code</a>.
+                    </p>
                     
-                    <h4>Data Analysis Findings</h4>
-                    <p class="text-muted">Analysis revealed that stations in downtown Chicago and emerging neighborhoods like Logan Square
-                        showed the highest CAGR (e.g., 5-7% annually from 2001-2019). Post-pandemic, recovery was strongest in tech hubs,
-                        with some stations exceeding 2019 levels by 2024. Key metrics include: average ridership increase of 15% in
-                        top-growth stations since 2021, and visualizations showing color-coded growth from red (decline) to green (high
-                        growth). Sample plot: A bar chart indicated that 40% of stations recovered to pre-pandemic levels by 2023.</p>
+                    <h4 id="findings">Data Analysis Findings</h4>
+                    <p class="text-muted">
+                        There are three points of analysis within the scope of this project: weekday ridership trends, line by line comparisons, and station-level growth.
+                    </p>
+                    <h6>Weekday Ridership Trends:</h6>
+                    <p class="text-muted">
+                        Pre-pandemic weekday ridership trends show a regular fluctuation, with Monday rides remaining consistantly lower that other weekdays.
+                        Following the return to work in 2021, ridership patterns shifted, showing a sharp decline in both Monday and Friday rides,
+                        perhaps indicating a lasting shift towards more flexible work schedules and remote work options.
+                    </p>
+                    <h6>Line by Line Comparisons:</h6>
+                    <p class="text-muted">
+                        For the last 25 years, the red line, running North-South through downtown, has held the greatest ridership by a large margin, followed by the blue, brown,
+                        and purple lines, then the orange, green, and pink lines, with the yellow line, a suburban connector, having the lowest ridership. These relationships
+                        have remained consistent through the pandemic.
+                    </p>
+                    <p class="text-muted">
+                        From 2001 to 2019, despite having the largest ridership, the Red line had the lowest positive compound annual growth rate (CAGR).
+                        The strongest recoveries are seen in the Brown, Purple, and Pink lines. The former two lines having middling growth pre-pandemic.
+                        The Blue and Green lines now find themselves with just below average growth rates, while they were once leaders.
+                    </p>
 
-                    <h4>Conclusions and Recommendations</h4>
+                    <h4 id="conclusions">Conclusions and Recommendations</h4>
                     <p class="text-muted">The data underscores opportunities in urban transit investment, particularly in areas with
                         sustained economic growth. Post-pandemic shifts suggest a preference for flexible commuting, recommending targeted
                         marketing to millennials and remote workers. Overall, the analysis supports data-driven urban planning to enhance
-                        accessibility and economic vitality in Chicago.</p>
+                        accessibility and economic vitality in Chicago.
+                    </p>
+                </div>
+            </div>
+            <!-- Charts -->
+            <div id="charts" class="row mt-4 justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-4 text-center">Data Visualizations</h3>
+                    <p class="text-muted text-center">Here are some key charts illustrating the ridership trends and analysis findings.</p>
+                    <div id="chart-weekday-ridership" class="mb-4 text-center">
+                        <img src="media/weekday_ridership_percentage_by_year.png" alt="Weekday Ridership Percentage by Year" class="img-fluid mx-auto d-block" style="max-width: 100%; height: auto;">
+                        <p class="mt-2 text-muted"><strong>Figure 1:</strong> Weekday Ridership Percentage by Year</p>
+                    </div>
+                    <div id="chart-total-rides-by-line" class="mb-4 text-center">
+                        <img src="media/Yearly Total Rides by Line.png" alt="Yearly Total Rides by Line" class="img-fluid mx-auto d-block" style="max-width: 100%; height: auto;">
+                        <p class="mt-2 text-muted"><strong>Figure 2:</strong> Yearly Total Rides by Line</p>
+                    </div>
+                    <div id="chart-cagr-2001-2019" class="mb-4 text-center">
+                        <img src="media/Average CAGR by Line 2001-2019.png" alt="Average CAGR by Line 2001-2019" class="img-fluid mx-auto d-block" style="max-width: 100%; height: auto;">
+                        <p class="mt-2 text-muted"><strong>Figure 3:</strong> Average CAGR by Line 2001-2019</p>
+                    </div>
+                    <div id="chart-cagr-2021-2024" class="mb-4 text-center">
+                        <img src="media/Average CAGR by Line 2021-2024.png" alt="Line Comparison CAGR 2021-2024" class="img-fluid mx-auto d-block" style="max-width: 100%; height: auto;">
+                        <p class="mt-2 text-muted"><strong>Figure 4:</strong> Line Comparison CAGR 2021-2024</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Interactive Maps -->
             <div id="interactive-maps" class="row mt-4">
-                <h3 class="mt-5 mb-4">Interactive Ridership Maps</h3>
-                <p class="text-muted">
-                    To provide a comprehensive view of the ridership data, two interactive maps were created. 
-                    The first shows the long-term growth trends from 2001 to 2019, highlighting areas of sustained development before the pandemic. 
-                    The second map focuses on the post-pandemic recovery and growth from 2021 to 2024, revealing new patterns in ridership behavior.
-                </p>
-                <div class="col-md-12 mb-5">
-                    <h4 class="text-center mb-3">Pre-Pandemic Growth (2001-2019)</h4>
-                    <div class="map-container">
-                        <iframe src="all_stations_growth_2001_2019_map_sorted.html" width="100%" height="600" style="border:none;"></iframe>
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mt-5 mb-4">Interactive Ridership Maps</h3>
+                    <p class="text-muted">
+                        To provide a comprehensive view of the ridership data, two interactive maps were created. 
+                        The first shows the long-term growth trends from 2001 to 2019, highlighting areas of sustained development before the pandemic. 
+                        The second map focuses on the post-pandemic recovery and growth from 2021 to 2024, revealing new patterns in ridership behavior.
+                    </p>
+                    <div class="mb-5">
+                        <h4 class="text-center mb-3">Pre-Pandemic Growth (2001-2019)</h4>
+                        <div class="map-container">
+                            <iframe src="media/all_stations_growth_2001_2019_map_sorted.html" width="100%" height="600" style="border:none;"></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <h4 class="text-center mb-3">Post-Pandemic Growth (2021-2024)</h4>
-                    <div class="map-container">
-                        <iframe src="all_stations_growth_2021_2024_map_sorted.html" width="100%" height="600" style="border:none;"></iframe>
+                    <div>
+                        <h4 class="text-center mb-3">Post-Pandemic Growth (2021-2024)</h4>
+                        <div class="map-container">
+                            <iframe src="media/all_stations_growth_2021_2024_map_sorted.html" width="100%" height="600" style="border:none;"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
