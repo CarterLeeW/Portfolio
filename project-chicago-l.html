@@ -63,10 +63,9 @@
                             <h4 class="h5 mb-3 text-center">Project Tech Stack</h4>
                             <hr>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-cogs mr-2 text-primary"></i><strong>Primary Tool:</strong> R</li>
-                                <li class="mb-2"><i class="fas fa-chart-bar mr-2 text-primary"></i><strong>Visualization:</strong> Plotly, Matplotlib</li>
-                                <li class="mb-2"><i class="fas fa-database mr-2 text-primary"></i><strong>Data Handling:</strong> SQL</li>
-                                <li class="mb-2"><i class="fas fa-file-excel mr-2 text-primary"></i><strong>Reporting:</strong> PowerBI, MS Office</li>
+                                <li class="mb-2"><i class="fas fa-cogs mr-2 text-primary"></i><strong>Primary Tool:</strong> Python</li>
+                                <li class="mb-2"><i class="fas fa-chart-bar mr-2 text-primary"></i><strong>Visualization:</strong> Folium (maps), Matplotlib (charts)</li>
+                                <li class="mb-2"><i class="fas fa-database mr-2 text-primary"></i><strong>Data Handling:</strong> Pandas</li>
                             </ul>
                             <div class="text-center mt-4">
                                <a href="https://github.com/CarterLeeW" target="_blank" class="btn btn-outline-primary btn-block">
@@ -145,6 +144,8 @@
                         <a href="https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme/about_data" target="_blank">stations</a>,
                         and the dataset for daily ridership numbers by station since 2001 can be found here:
                         <a href="https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f/about_data" target="_blank">ridership</a>.
+                        Ridership data for stations encompasses only station turnstile entries, and does not account for exits or transfers between lines.
+                        More comprehensive ridership data like demographics is not publicly available.
                         Data preprocessing involved cleaning for missing values and normalizing for seasonal trends. Growth rates
                         were calculated using compound annual growth rates (CAGR) for both long-term trends (2001-2019) and recovery (2021-2024).
                         The full notebook with code can be found here:
@@ -155,29 +156,50 @@
                     <p class="text-muted">
                         There are three points of analysis within the scope of this project: weekday ridership trends, line by line comparisons, and station-level growth.
                     </p>
-                    <h6>Weekday Ridership Trends:</h6>
+                    <h6>Weekday Ridership Trends: <a href="#chart-weekday-ridership">figure 1</a></h6>
                     <p class="text-muted">
-                        Pre-pandemic weekday ridership trends show a regular fluctuation, with Monday rides remaining consistantly lower that other weekdays.
+                        Pre-pandemic weekday ridership trends show a regular fluctuation, with Monday rides remaining consistently lower than other weekdays.
                         Following the return to work in 2021, ridership patterns shifted, showing a sharp decline in both Monday and Friday rides,
                         perhaps indicating a lasting shift towards more flexible work schedules and remote work options.
                     </p>
-                    <h6>Line by Line Comparisons:</h6>
+                    <h6>Line by Line Comparisons: <a href="#chart-total-rides-by-line">figure 2</a>, <a href="#chart-cagr-2001-2019">figure 3</a>, <a href="#chart-cagr-2021-2024">figure 4</a></h6>
                     <p class="text-muted">
-                        For the last 25 years, the red line, running North-South through downtown, has held the greatest ridership by a large margin, followed by the blue, brown,
-                        and purple lines, then the orange, green, and pink lines, with the yellow line, a suburban connector, having the lowest ridership. These relationships
+                        For the last 25 years, the Red line, running north-south through downtown, has held the greatest ridership by a large margin, followed by the Blue, Brown,
+                        and Purple lines, then the Orange, Green, and Pink lines, with the Yellow line, a suburban connector, having the lowest ridership. These relationships
                         have remained consistent through the pandemic.
                     </p>
                     <p class="text-muted">
-                        From 2001 to 2019, despite having the largest ridership, the Red line had the lowest positive compound annual growth rate (CAGR).
+                        For the last 25 years, despite having the largest ridership, the Red line had the second lowest positive compound annual growth rate (CAGR).
                         The strongest recoveries are seen in the Brown, Purple, and Pink lines. The former two lines having middling growth pre-pandemic.
                         The Blue and Green lines now find themselves with just below average growth rates, while they were once leaders.
                     </p>
+                    <h6>Station-Level Growth: <a href="#interactive-maps">maps</a></h6>
+                    <p class="text-muted">
+                        After the pandemic, the greatest stations for growth are within the Loop and the immediate surrounding areas.
+                        Strong growth continues along the Blue line towards O'Hare. Most of the lowest performing stations are those within expressway medians,
+                        this encompasses most Red line stations south of the loop, and Blue line stations on the Forest Park branch.
+                        These growth rates can be visualized in the interactive maps below.
+                    </p>
 
                     <h4 id="conclusions">Conclusions and Recommendations</h4>
-                    <p class="text-muted">The data underscores opportunities in urban transit investment, particularly in areas with
-                        sustained economic growth. Post-pandemic shifts suggest a preference for flexible commuting, recommending targeted
-                        marketing to millennials and remote workers. Overall, the analysis supports data-driven urban planning to enhance
-                        accessibility and economic vitality in Chicago.
+                    <h6>For CTA</h6>
+                    <p class="text-muted">
+                        The CTA must address the changing ridership patterns post-pandemic. With the decline in Monday and Friday ridership,
+                        there is an opportunity to right-size the service, which may offer immediate cost savings. There is also an opportunity to
+                        optimize the CTA/PACE pass system, which only offers 1, 3, and 7 day passes. Offering a discounted 5-day pass could encourage hybrid commuters
+                        to use the "L" on days when they don't need to be in the office.
+                    </p>
+                    <p class="text-muted">
+                        The CTA should also consider the long-term feasability of stations that are built within expressway medians.
+                        These stations have consistently underperformed, and face challenges such as noise, pollution, and lack of development around them.
+                        Though the cost of moving these stations would be high, the long-term benefits must be considered if these trends continue.
+                    </p>
+                    <h6>For Real Estate Developers</h6>
+                    <p class="text-muted">
+                        Real estate developers should pay close attention to the changing dynamics of transit-oriented development (TOD) in Chicago.
+                        As ridership patterns evolve, there may be new opportunities for mixed-use developments near high-performing stations.
+                        Opportunity zones would be areas with low current development or lower property values, but strong ridership growth.
+                        Additionally, developers should consider the potential for adaptive reuse of underperforming properties, particularly those near lower-ridership stations.
                     </p>
                 </div>
             </div>
