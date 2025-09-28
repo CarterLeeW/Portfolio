@@ -1,3 +1,3 @@
 # Carter Wooton's Portfolio
 
-This will be updated soon...
+use the gh-pages branch for portfolio code.
